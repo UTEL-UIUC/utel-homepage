@@ -1,0 +1,79 @@
+import React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
+import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
+import LinkIcon from "@mui/icons-material/Link";
+import Link from "@mui/material/Link";
+import Paper from "@mui/material/Paper";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Avatar from "@mui/material/Avatar";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import Lewis from "src/People/lehe.jpeg";
+import Shirin from "src/People/shirin.jpeg";
+import Praneeth from "src/People/praneeth.jpeg";
+import Ayush from "src/People/ayush.jpeg";
+
+const Profile = ({ name, href, title, pic }) => {
+  return (
+    <Grid
+      alignItems="center"
+      sx={{
+        display: "flex",
+        width: "200px",
+        flexDirection: "column",
+        textAlign: "center",
+      }}
+    >
+      <Avatar alt="Lewis Lehe" src={pic} sx={{ width: 120, height: "120px" }} />
+      <Link variant="h5" underline="hover" href={href} mt={1}>
+        {name}
+      </Link>
+      <Typography variant="subtitle1">{title}</Typography>
+    </Grid>
+  );
+};
+
+export default () => {
+  return (
+    <>
+      <Grid item container direction="column" alignItems="center">
+        <Typography variant="h4" mb={2}>
+          People
+        </Typography>
+        <Profile
+          name="Lewis Lehe"
+          href="http://lewislehe.com"
+          pic={Lewis}
+          title="Assistant Professor of Civil and Environmental Engineering"
+        />
+        {/* <Divider width={'100%'}>Students</Divider> */}
+        <Typography variant="h4" mb={2} mt={4}>
+          Students
+        </Typography>
+        <Stack direction="row" spacing={2}>
+          <Profile
+            name="Ayush Pandey"
+            href="http://lewislehe.com"
+            pic={Ayush}
+            title="Graduate Research Assistant"
+          />
+          <Profile
+            name="Saipraneeth Devunuri"
+            href="http://lewislehe.com"
+            pic={Praneeth}
+            title="Graduate Research Assistant"
+          />
+          <Profile
+            name="Shirin Qiam"
+            href="http://lewislehe.com"
+            pic={Shirin}
+            title="Graduate Research Assistant"
+          />
+        </Stack>
+      </Grid>
+    </>
+  );
+};

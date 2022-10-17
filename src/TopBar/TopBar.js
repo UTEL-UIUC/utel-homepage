@@ -30,7 +30,7 @@ export default () => {
   };
 
   return (
-    <AppBar position="static" color="primary">
+    <AppBar position="sticky" >
       <Container maxWidth='lg'>
         <Toolbar>
           <TimeToLeaveIcon
@@ -65,7 +65,7 @@ export default () => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "primary",
               textDecoration: "none",
               flexGrow: 1,
             }}
@@ -80,13 +80,14 @@ export default () => {
             }}
             align="right"
           >
+
             <Button
-              key={"home"}
+              key={"about"}
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
               href="/"
             >
-              Home
+              About
             </Button>
             <Button
               key={"publications"}
@@ -95,6 +96,14 @@ export default () => {
               href="/publications"
             >
               publications
+            </Button>
+            <Button
+              key={"people"}
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block" }}
+              href="/people"
+            >
+              people
             </Button>
           </Box>
         </Toolbar>
