@@ -9,10 +9,10 @@ import Typography from "@mui/material/Typography";
 import TopBar from "src/TopBar/TopBar";
 import Publications from "src/Publications/Publications";
 import People from "src/People/People";
+import Person from "src/Person/Person";
 import Divider from "@mui/material/Divider";
 import Chip from "@mui/material/Chip";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import colors from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
@@ -34,9 +34,11 @@ const Layout = () => {
   return (
     <>
       <TopBar />
-      <Grid container justifyContent="center" direction="row" mt={5} mb={5}>
+      {/* <Grid container justifyContent="center" direction="row" mt={5} mb={5}> */}
+      <Box mt={5} mb={5}>
         <Outlet />
-      </Grid>
+      </Box>
+      {/* </Grid> */}
       <Divider>
         <Chip label="CONTACT" />
       </Divider>
@@ -52,7 +54,9 @@ const App = () => {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="publications" element={<Publications />} />
-            <Route path="people" element={<People />} />
+            <Route path="people" element={<People />}>
+            </Route>
+              <Route path="people/:person" element={<Person />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>

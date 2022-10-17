@@ -14,7 +14,7 @@ const Item = ({ title, journal, year, author, link, pdf }) => {
     <Box sx={{ p: 1 }} elevation={2}>
       <Box>
         {/* <ArticleOutlinedIcon /> */}
-        <Typography variant="h5" mb={1} >
+        <Typography variant="h5" mb={1}>
           {title}
         </Typography>
         {/* <Divider xs={{m:3}}/> */}
@@ -45,8 +45,8 @@ const Item = ({ title, journal, year, author, link, pdf }) => {
 
 export default () => {
   return (
-    <>
-      <Grid item container direction="column" xs={6}>
+    <Grid container justifyContent="center">
+      <Grid container item direction="column" xs={6}>
         <Typography
           variant="h4"
           align="center"
@@ -55,21 +55,21 @@ export default () => {
           Publications
         </Typography>
         <Item
-          title={"Taxi service with heterogeneous drivers and a competitive medallion market"}
-          year={2022}
-          journal={
-            "Journal of Urban Economics"
+          title={
+            "Taxi service with heterogeneous drivers and a competitive medallion market"
           }
+          year={2022}
+          journal={"Journal of Urban Economics"}
           author={"Lewis Lehe, Ayush Pandey"}
           link={"https://doi.org/10.1016/j.jue.2022.103488"}
-          pdf={"https://www.researchgate.net/profile/Lewis-Lehe/publication/344590011_Taxi_service_with_heterogeneous_drivers_and_a_competitive_medallion_market/links/62be11a5f10dfc7b53efaf31/Taxi-service-with-heterogeneous-drivers-and-a-competitive-medallion-market.pdf"}
+          pdf={
+            "https://www.researchgate.net/profile/Lewis-Lehe/publication/344590011_Taxi_service_with_heterogeneous_drivers_and_a_competitive_medallion_market/links/62be11a5f10dfc7b53efaf31/Taxi-service-with-heterogeneous-drivers-and-a-competitive-medallion-market.pdf"
+          }
         />
         <Item
           title={"Bus Stop Spacing Statistics: Theory and Evidence"}
           year={2022}
-          journal={
-            "revisions requested at Transportation Research Record"
-          }
+          journal={"revisions requested at Transportation Research Record"}
           author={"Lewis Lehe, Saipraneeth Devunuri"}
           pdf={"https://doi.org/10.48550/arXiv.2208.04394"}
         />
@@ -81,7 +81,9 @@ export default () => {
           link={"https://doi.org/10.1016/j.retrec.2021.101116"}
         />
         <Item
-          title={"Increasing Returns to Scale in Carpool Matching: Evidence from Scoop"}
+          title={
+            "Increasing Returns to Scale in Carpool Matching: Evidence from Scoop"
+          }
           year={2021}
           journal={"Findings"}
           author={"Ayush Pandey, Lewis Lehe, Vikash Gayah"}
@@ -89,13 +91,13 @@ export default () => {
           link={"https://doi.org/10.32866/001c.25093"}
         />
         <Item
-          title={
-            "Distributions of Bus Stop Spacings in the United States"
-          }
+          title={"Distributions of Bus Stop Spacings in the United States"}
           year={2021}
           journal={"Findings"}
           author={"Ayush Pandey, Lewis Lehe, Dana Monzer"}
-          link={"https://findingspress.org/article/27373-distributions-of-bus-stop-spacings-in-the-united-states"}
+          link={
+            "https://findingspress.org/article/27373-distributions-of-bus-stop-spacings-in-the-united-states"
+          }
           pdf={"https://findingspress.org/article/27373.pdf"}
         />
         <Item
@@ -105,7 +107,9 @@ export default () => {
           year={2020}
           journal={"Transportation Research Part B: Methodological"}
           author={"Lewis Lehe"}
-          pdf={"https://www.researchgate.net/profile/Lewis-Lehe/publication/343321364_Winners_and_losers_from_road_pricing_with_heterogeneous_travelers_and_a_mixed-traffic_bus_alternative/links/5f25fea692851cd302d18ce7/Winners-and-losers-from-road-pricing-with-heterogeneous-travelers-and-a-mixed-traffic-bus-alternative.pdf"}
+          pdf={
+            "https://www.researchgate.net/profile/Lewis-Lehe/publication/343321364_Winners_and_losers_from_road_pricing_with_heterogeneous_travelers_and_a_mixed-traffic_bus_alternative/links/5f25fea692851cd302d18ce7/Winners-and-losers-from-road-pricing-with-heterogeneous-travelers-and-a-mixed-traffic-bus-alternative.pdf"
+          }
           link={"https://doi.org/10.1016/j.trb.2020.07.003"}
         />
         <Item
@@ -118,15 +122,13 @@ export default () => {
           link={"https://doi.org/10.1016/j.ecotra.2020.100182"}
         />
         <Item
-          title={
-            "Downtown congestion pricing in practice"
-          }
+          title={"Downtown congestion pricing in practice"}
           year={2019}
           journal={"Transporation Research Part C: Emerging Technologies"}
           author={"Lewis Lehe"}
           link={"https://doi.org/10.1016/j.trc.2019.01.020"}
         />
-      </Grid>
-    </>
+      </Grid>{" "}
+    </Grid>
   );
 };

@@ -49,12 +49,12 @@ export default () => {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
-              flexGrow: 1,
+              // flexGrow: 1,
             }}
           >
             UTEL
           </Typography>
-          <Typography
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -67,12 +67,12 @@ export default () => {
               letterSpacing: ".3rem",
               color: "primary",
               textDecoration: "none",
-              flexGrow: 1,
+              // flexGrow: 1,
             }}
           >
             UTEL
-          </Typography>
-          {/* <Box sx={{ flexGrow: 1 }} /> */}
+          </Typography> */}
+          <Box sx={{ flexGrow: 1 }} />
           <Box
             sx={{
               justifyContent: "center",
