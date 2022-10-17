@@ -54,9 +54,8 @@ const App = () => {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="publications" element={<Publications />} />
-            <Route path="people" element={<People />}>
-            </Route>
-              <Route path="people/:person" element={<Person />} />
+            <Route path="people" element={<People />} />
+            <Route path="people/:person" element={<Person />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
