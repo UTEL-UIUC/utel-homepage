@@ -13,12 +13,12 @@ module.exports = {
     filename: "[name].js"
   },
   mode: "production",
-  optimization: {
-    splitChunks: {
-      chunks: "all"
-    },
-    runtimeChunk: true
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: "all"
+  //   },
+  //   runtimeChunk: true
+  // },
   plugins: [
     new HtmlWebpackPlugin({
       template: resolve(__dirname, "src", "index.html"),
