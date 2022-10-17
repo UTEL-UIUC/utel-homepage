@@ -45,6 +45,7 @@ const Layout = () => {
 };
 
 const App = () => {
+  console.log('app loaded')
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
@@ -53,7 +54,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="publications" element={<Publications />} />
             <Route path="people" element={<People />} />
-            <Route path="people/lewis" element={<Person person="lewis" />} />
+            <Route path="people/:person" element={<Person />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
