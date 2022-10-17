@@ -4,8 +4,6 @@ import "./style.css";
 import { BrowserRouter, Route, Link, Outlet, Routes } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Home from "src/Home/Home";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import TopBar from "src/TopBar/TopBar";
 import Publications from "src/Publications/Publications";
 import People from "src/People/People";
@@ -55,7 +53,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="publications" element={<Publications />} />
             <Route path="people" element={<People />} />
-            <Route path="people/:person" element={<Person />} />
+            <Route path="people/lewis" element={<Person person="lewis" />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
