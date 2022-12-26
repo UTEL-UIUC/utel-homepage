@@ -43,7 +43,7 @@ const Profile = ({ name, title, pic, icons }) => {
 
 export default () => {
   return (
-    <Grid item container direction="column" alignItems="center">
+    <Grid item container direction="column" alignItems='center'>
       <Typography variant="h4" mb={2}>
         People
       </Typography>
@@ -89,19 +89,12 @@ export default () => {
           title="Assistant Professor of Civil and Environmental Engineering"
         />
       </Box>
-      {/* <Divider>
-        <Chip label="CONTACT" />
-      </Divider> */}
-      {/* <Typography variant="h4" mb={2} mt={4}>
-        Students
-      </Typography> */}
       <Grid
         item
         container
         justifyContent="center"
         direction="row"
         spacing={2}
-        mt={3}
       >
         <Profile
           name="Ayush Pandey"

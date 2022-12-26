@@ -46,9 +46,9 @@ export default () => {
       md={7}
       xs={10}
       direction="column"
-      spacing={3}
+      // spacing={3}
     >
-      <Typography variant="h4" align="center">
+      <Typography variant="h4" align='center' mb={2}>
         Publications
       </Typography>
       <Item
