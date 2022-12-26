@@ -1,17 +1,58 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Item from "./Pub";
+import LinkIcon from "@mui/icons-material/Link";
+import IconButton from "@mui/material/IconButton";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import MyIconButton from "../MyIconButton/MyIconButton";
+
+const Item = ({ title, journal, year, author, link, pdf }) => {
+  return (
+    <Grid item sx={{ mb: 1 }}>
+      <Box>
+        <Typography variant="h6" mb={1}>
+          {title}
+        </Typography>
+        <Typography>
+          {author} ({year})
+        </Typography>
+        <Typography>{journal}</Typography>
+      </Box>
+      <IconButton
+        color="secondary"
+        href={link}
+        sx={{ display: link ? true : "none" }}
+      >
+        <LinkIcon />
+      </IconButton>
+      <IconButton
+        color="secondary"
+        href={pdf}
+        aria-label="preprint"
+        sx={{ display: !!pdf }}
+      >
+        <PictureAsPdfIcon />
+      </IconButton>
+    </Grid>
+  );
+};
 
 export default () => {
   return (
-    <Grid container justifyContent="center" md={6} direction="column" spacing={3}>
-      {/* <Typography
-        variant="h4"
-        align="center"
-      >
+    <Grid
+      container
+      justifyContent="center"
+      item
+      md={6}
+      xs={10}
+      direction="column"
+      spacing={3}
+    >
+      <Typography variant="h4" align="center">
         Publications
-      </Typography> */}
+      </Typography>
       <Item
         title={
           "Taxi service with heterogeneous drivers and a competitive medallion market"
@@ -46,9 +87,7 @@ export default () => {
         link={"https://doi.org/10.32866/001c.25093"}
       />
       <Item
-        title={
-          "Taxation of ridehailing"
-        }
+        title={"Taxation of ridehailing"}
         year={2021}
         journal={"Illinois Center for Transportation Series"}
         author={"Ayush Pandey, Lewis Lehe, Vikash Gayah"}

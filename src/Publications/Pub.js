@@ -7,10 +7,10 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import { Paper } from "@mui/material";
-import MyIconButton from '../MyIconButton/MyIconButton'
+import MyIconButton from "../MyIconButton/MyIconButton";
 export default ({ title, journal, year, author, link, pdf }) => {
   return (
-    <Paper elevation={2} sx={{ mb: 3, p: 2 }}>
+    <Box item sx={{ mb: 3 }}>
       <Box>
         <Typography variant="h5" mb={1}>
           {title}
@@ -39,6 +39,6 @@ export default ({ title, journal, year, author, link, pdf }) => {
         <PictureAsPdfIcon />
       </IconButton>
       {/* )       <Divider /> */}
-    </Paper>
+    </Box>
   );
 };
