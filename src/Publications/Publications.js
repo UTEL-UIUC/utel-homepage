@@ -2,7 +2,6 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import LinkIcon from "@mui/icons-material/Link";
-import IconButton from "@mui/material/IconButton";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
@@ -11,30 +10,29 @@ import MyIconButton from "../MyIconButton/MyIconButton";
 const Item = ({ title, journal, year, author, link, pdf }) => {
   return (
     <Grid item sx={{ mb: 1 }}>
-      <Box>
-        <Typography variant="h6" mb={1}>
-          {title}
-        </Typography>
-        <Typography>
-          {author} ({year})
-        </Typography>
-        <Typography>{journal}</Typography>
-      </Box>
-      <IconButton
-        color="secondary"
-        href={link}
-        sx={{ display: link ? true : "none" }}
-      >
-        <LinkIcon />
-      </IconButton>
-      <IconButton
-        color="secondary"
-        href={pdf}
-        aria-label="preprint"
-        sx={{ display: !!pdf }}
-      >
-        <PictureAsPdfIcon />
-      </IconButton>
+      <Paper sx={{ p: 1 }} variant="outlined">
+        <Box>
+          <Typography variant="h6" mb={1}>
+            {title}
+          </Typography>
+          <Typography>
+            {author} ({year})
+          </Typography>
+          <Typography>{journal}</Typography>
+        </Box>
+        <MyIconButton
+          href={link}
+          alt="link"
+          sx={{ display: link ? true : "none" }}
+          icon={<LinkIcon />}
+        />
+        <MyIconButton
+          href={pdf}
+          alt="pdf"
+          sx={{ display: !!pdf }}
+          icon={<PictureAsPdfIcon />}
+        />
+      </Paper>
     </Grid>
   );
 };
@@ -45,7 +43,7 @@ export default () => {
       container
       justifyContent="center"
       item
-      md={6}
+      md={7}
       xs={10}
       direction="column"
       spacing={3}

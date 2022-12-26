@@ -7,140 +7,29 @@ import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave";
-// import { BrowserRouter, Route, Link, Outlet, Routes } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
-import IconButton  from "@mui/material/IconButton";
-import Link  from "@mui/material/Link";
-
-// const TopBar = () => {
-//   const [anchorElNav, setAnchorElNav] = React.useState(null);
-//   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-//   const handleOpenNavMenu = (event) => {
-//     setAnchorElNav(event.currentTarget);
-//   };
-//   const handleOpenUserMenu = (event) => {
-//     setAnchorElUser(event.currentTarget);
-//   };
-
-//   const handleCloseNavMenu = () => {
-//     setAnchorElNav(null);
-//   };
-
-//   const handleCloseUserMenu = () => {
-//     setAnchorElUser(null);
-//   };
-
-//   return (
-//     <AppBar position="sticky" >
-//       <Container maxWidth='lg'>
-//         <Toolbar>
-//           <TimeToLeaveIcon
-//             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-//           />
-//           <Typography
-//             variant="h6"
-//             noWrap
-//             component="a"
-//             href="/"
-//             sx={{
-//               mr: 2,
-//               display: { xs: "none", md: "flex" },
-//               fontFamily: "monospace",
-//               fontWeight: 700,
-//               letterSpacing: ".3rem",
-//               color: "inherit",
-//               textDecoration: "none",
-//               // flexGrow: 1,
-//             }}
-//           >
-//             UTEL
-//           </Typography>
-//           {/* <Typography
-//             variant="h5"
-//             noWrap
-//             component="a"
-//             href=""
-//             sx={{
-//               mr: 2,
-//               display: { xs: "flex", md: "none" },
-//               fontFamily: "monospace",
-//               fontWeight: 700,
-//               letterSpacing: ".3rem",
-//               color: "primary",
-//               textDecoration: "none",
-//               // flexGrow: 1,
-//             }}
-//           >
-//             UTEL
-//           </Typography> */}
-//           <Box sx={{ flexGrow: 1 }} />
-//           <Box
-//             sx={{
-//               justifyContent: "center",
-//               display: { xs: "none", md: "flex" },
-//             }}
-//             align="right"
-//           >
-
-//             <Button
-//               key={"about"}
-//               onClick={handleCloseNavMenu}
-//               sx={{ my: 2, color: "white", display: "block" }}
-//               href="/"
-//             >
-//               About
-//             </Button>
-//             <Button
-//               key={"publications"}
-//               onClick={handleCloseNavMenu}
-//               sx={{ my: 2, color: "white", display: "block" }}
-//               href="/publications"
-//             >
-//               publications
-//             </Button>
-//             <Button
-//               key={"people"}
-//               onClick={handleCloseNavMenu}
-//               sx={{ my: 2, color: "white", display: "block" }}
-//               href="/people"
-//             >
-//               people
-//             </Button>
-//           </Box>
-//         </Toolbar>
-//       </Container>
-//     </AppBar>
-//   );
-// };
+import IconButton from "@mui/material/IconButton";
+import Link from "@mui/material/Link";
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
-
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <TimeToLeaveIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-
-{/* import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave"; */}
+          <TimeToLeaveIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -188,29 +77,31 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem  onClick={handleCloseNavMenu}>
+              <MenuItem onClick={handleCloseNavMenu}>
                 <Link textAlign="center" href="/">
                   About
                 </Link>
               </MenuItem>
-              <MenuItem  onClick={handleCloseNavMenu}>
+              <MenuItem onClick={handleCloseNavMenu}>
                 <Link textAlign="center" href="/publications">
                   Publications
                 </Link>
               </MenuItem>
-              <MenuItem  onClick={handleCloseNavMenu}>
+              <MenuItem onClick={handleCloseNavMenu}>
                 <Link textAlign="center" href="/people">
                   People
                 </Link>
               </MenuItem>
             </Menu>
           </Box>
-          <TimeToLeaveIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <TimeToLeaveIcon
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+          />
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -249,16 +140,6 @@ function ResponsiveAppBar() {
             >
               people
             </Button>
-
-            {/* {pages.map((page) => (
-              <Button
-                
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))} */}
           </Box>
         </Toolbar>
       </Container>

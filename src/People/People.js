@@ -24,7 +24,7 @@ import Stack from "@mui/material/Stack";
 const Profile = ({ name, title, pic, icons }) => {
   return (
     <Grid item>
-      <Paper elevation={2} sx={{ p: 2 }}>
+      <Paper variant='outlined' sx={{ p: 2 }}>
         <Stack
           sx={{ width: 280, textAlign: "center" }}
           alignItems="center"

@@ -16,10 +16,11 @@ export default () => {
       item
       container
       direction="column"
-      sm={7}
+      md={8}
+      lg={7}
+      xs={10}
       id="about"
-      // rowSpacing={1}
-      // justifyContent="center"
+      justifyContent="center"
     >
       <Grid container mb={4}>
         <Typography variant="h4" mb={3}>
@@ -74,33 +75,6 @@ export default () => {
           <img src={GTFSSegments} style={{ maxHeight: 250 }} />
         </Grid>
       </Grid>
-      {/* <Divider /> */}
-      {/* <Grid
-        item
-        container
-        direction="row"
-        spacing={4}
-        justifyContent="center"
-        alignItems="center"
-        mt={2}
-      > */}
-
-      {/* <Card sx={{maxWidth: '345px'}}>
-
-        </Card>
-        <Grid item sm={4}>
-          <iframe
-            width="560"
-            height="315"
-            // maxWidth="500"
-            src="https://www.youtube.com/embed/1vATVGh9IvU"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen={true}
-          ></iframe>
-        </Grid>
-      </Grid> */}
     </Grid>
   );
 };

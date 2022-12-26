@@ -44,7 +44,7 @@ const Layout = () => {
         {/* </Box> */}
       </Grid>
       <Divider>
-        <Chip label="CONTACT" />
+        <Chip label="2023" />
       </Divider>
     </>
   );
