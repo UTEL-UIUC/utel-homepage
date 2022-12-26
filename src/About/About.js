@@ -9,6 +9,7 @@ import FontAwesomeSvgIcon from "../FontAwesomeSVGIcon/FontAwesomeSVGIcon";
 import CZ from "./cz.png";
 import GTFSSegments from "./gtfs-segments.jpeg";
 import MyIconButton from "../MyIconButton/MyIconButton";
+import { Link } from "@mui/material";
 export default () => {
   return (
     <Grid
@@ -26,10 +27,12 @@ export default () => {
         </Typography>
         <Typography sx={{ overflowWrap: "break-word" }}>
           Welcome to the Urban Traffic & Economics Lab (UTEL) at UIUC’s
-          Department of Civil & Environmental Engineering, run by Dr. Lewis
-          Lehe. The group is focused on movement of people in cities,
-          emphasizing economic theory and novel data collection. We do a lot of
-          programming.
+          Department of Civil & Environmental Engineering, run by{" "}
+          <Link href="https://lewislehe.com" target="_blank" color="secondary">
+            Dr. Lewis Lehe
+          </Link>
+          . The group is focused on movement of people in cities, emphasizing
+          economic theory and novel data collection. We do a lot of programming.
         </Typography>
         <MyIconButton
           alt="github"
@@ -44,7 +47,9 @@ export default () => {
       </Grid>
       <Grid container direction="row">
         <Grid item sm={6}>
-          <Typography variant="h5">TrafficVis</Typography>
+          <Link variant="h5" href="https://trafficvis.com" target="_blank" color="primary">
+            TrafficVis
+          </Link>
           <Typography sx={{ overflowWrap: "break-word" }}>
             Traffic Vis is a group of interactive simulations aimed at teaching
             the basics of transportation engineering.
@@ -58,7 +63,7 @@ export default () => {
       </Grid>
       <Grid container direction="row" mt={2}>
         <Grid item sm={6}>
-          <Typography variant="h6">GTFS Segments</Typography>
+          <Link variant="h5" href="https://github.com/UTEL-UIUC/gtfs_segments" target="_blank" color="primary">GTFS Segments</Link>
           <Typography sx={{ overflowWrap: "break-word" }}>
             GTFS Segments is a python library that reads GTFS files and analyzes
             bus stop spacings.
