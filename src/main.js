@@ -7,7 +7,7 @@ import About from "src/About/About";
 import TopBar from "src/TopBar/TopBar";
 import Publications from "src/Publications/Publications";
 import People from "src/People/People";
-import Person from "src/Person/Person";
+// import Person from "src/Person/Person";
 // import myIconButton 
 import Divider from "@mui/material/Divider";
 import Chip from "@mui/material/Chip";
@@ -18,13 +18,10 @@ import * as colors from "@mui/material/colors";
 const theme = createTheme({
   palette: {
     type: "light",
-    // primary: colors.amber[800],
-    // secondary: colors.blue
     primary: {
       main: colors.deepOrange["700"],
     },
     secondary: {
-      // main: "#2196f3",
       main: colors.lightBlue['A700']
     },
   },
@@ -38,10 +35,8 @@ const Layout = () => {
   return (
     <>
       <TopBar />
-      <Grid container justifyContent="center" direction="row" mt={5} mb={5}>
-        {/* <Box mt={6} mb={5}> */}
+      <Grid container justifyContent="center" direction="row" mt={3} mb={3}>
         <Outlet />
-        {/* </Box> */}
       </Grid>
       <Divider>
         <Chip label="2023" />
@@ -60,7 +55,7 @@ const App = () => {
             <Route index element={<About />} />
             <Route path="publications" element={<Publications />} />
             <Route path="people" element={<People />} />
-            <Route path="people/:person" element={<Person />} />
+            {/* <Route path="people/:person" element={<Person />} /> */}
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
