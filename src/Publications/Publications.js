@@ -67,7 +67,7 @@ export default () => {
         title={"Bus Stop Spacing Statistics: Theory and Evidence"}
         year={2022}
         journal={"revisions requested at Transportation Research Record"}
-        author={"Lewis Lehe, Saipraneeth Devunuri"}
+        author={"Saipraneeth Devunuri, Shirin Qiam, Ayush Pandey, Lewis Lehe"}
         pdf={"https://doi.org/10.48550/arXiv.2208.04394"}
       />
       <Item
@@ -88,7 +88,7 @@ export default () => {
         title={"Taxation of ridehailing"}
         year={2021}
         journal={"Illinois Center for Transportation Series"}
-        author={"Ayush Pandey, Lewis Lehe, Vikash Gayah"}
+        author={"Lewis Lehe, Javier Rondan, Saipraneeth Devunuri, Ayush Pandey"}
         pdf={"https://apps.ict.illinois.edu/projects/getfile.asp?id=9975"}
       />
       <Item
