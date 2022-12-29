@@ -184,6 +184,16 @@ export default () => {
           icons={
             <Box>
               <MyIconButton
+                alt="research gate"
+                href="https://www.researchgate.net/profile/Shirin-Qiam"
+                icon={<FontAwesomeSvgIcon icon={faResearchgate} />}
+              />
+              <MyIconButton
+                alt="orcid"
+                href="https://orcid.org/0000-0002-9720-5656"
+                icon={<FontAwesomeSvgIcon icon={faOrcid} />}
+              />  
+              <MyIconButton
                 aria-label="delete"
                 href="cv-shirin.pdf"
                 icon={<Typography>CV</Typography>}
@@ -192,6 +202,11 @@ export default () => {
                 alt="email"
                 href="mailto:sqiam2@illinois.edu"
                 icon={<EmailIcon />}
+              />
+              <MyIconButton
+                alt="twitter"
+                href="https://twitter.com/Shiimqim"
+                icon={<TwitterIcon />}
               />
             </Box>
           }
