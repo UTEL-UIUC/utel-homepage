@@ -52,6 +52,27 @@ export default () => {
         Publications
       </Typography>
       <Item
+        title={"Scale effects in ridesplitting: A case study of the City of Chicago"}
+        year={2023}
+        journal={"Transportation Research Part A: Policy and Practice"}
+        author={"Hao Liu, Saipraneeth Devunuri, Lewis Lehe, Vikash Gayah"}
+        pdf={"https://www.sciencedirect.com/science/article/abs/pii/S0965856423001106"}
+      />
+      <Item
+        title={"Bus Stop Spacing Statistics: Theory and Evidence"}
+        year={2023}
+        journal={"Submitted to Journal of Public Transportation"}
+        author={"Saipraneeth Devunuri, Shirin Qiam, Ayush Pandey, Lewis Lehe, Dana Monzer"}
+        pdf={"https://arxiv.org/abs/2208.04394"}
+      />
+      <Item
+        title={"ChatGPT for GTFS: From Words to Information"}
+        year={2023}
+        journal={"Submitted to Journal of Public Transportation"}
+        author={"Saipraneeth Devunuri, Shirin Qiam, Lewis Lehe"}
+        pdf={"https://arxiv.org/abs/2308.02618"}
+      />
+      <Item
         title={
           "Taxi service with heterogeneous drivers and a competitive medallion market"
         }
@@ -62,13 +83,6 @@ export default () => {
         pdf={
           "https://www.researchgate.net/profile/Lewis-Lehe/publication/344590011_Taxi_service_with_heterogeneous_drivers_and_a_competitive_medallion_market/links/62be11a5f10dfc7b53efaf31/Taxi-service-with-heterogeneous-drivers-and-a-competitive-medallion-market.pdf"
         }
-      />
-      <Item
-        title={"Bus Stop Spacing Statistics: Theory and Evidence"}
-        year={2022}
-        journal={"revisions requested at Transportation Research Record"}
-        author={"Saipraneeth Devunuri, Shirin Qiam, Ayush Pandey, Lewis Lehe"}
-        pdf={"https://doi.org/10.48550/arXiv.2208.04394"}
       />
       <Item
         title={"Large Elasticity at Introduction"}
