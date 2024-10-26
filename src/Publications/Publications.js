@@ -6,32 +6,35 @@ import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import MyIconButton from "../MyIconButton/MyIconButton";
-
-const Item = ({ title, journal, year, author, link, pdf }) => {
+import Link from "@mui/material/Link";
+const Item = ({ title, journal, year, author, link, pdf, oa = false }) => {
   return (
     <Grid item sx={{ mb: 1 }}>
       <Paper sx={{ p: 1 }} variant="outlined">
         <Box>
-          <Typography variant="h6" mb={1}>
-            {title}
-          </Typography>
+          <Link href={link} target="_blank" variant="h6"  color="secondary" >
+          {title}
+          </Link>
           <Typography>
             {author} ({year})
           </Typography>
-          <Typography>{journal}</Typography>
+          <Typography style={{ fontStyle: "italic" }}>{journal}</Typography>
         </Box>
-        <MyIconButton
+        {/* <MyIconButton
           href={link}
           alt="link"
           sx={{ display: link ? true : "none" }}
           icon={<LinkIcon />}
-        />
-        <MyIconButton
-          href={pdf}
-          alt="pdf"
-          sx={{ display: !!pdf }}
-          icon={<PictureAsPdfIcon />}
-        />
+        /> */}
+        {oa && <span style={{ fontSize: "15px" }}>(Open Access)</span>}
+        {pdf && (
+          <MyIconButton
+            href={pdf}
+            alt="pdf"
+            sx={{ display: !!pdf }}
+            icon={<PictureAsPdfIcon />}
+          />
+        )}
       </Paper>
     </Grid>
   );
@@ -48,34 +51,116 @@ export default () => {
       direction="column"
       // spacing={3}
     >
-      <Typography variant="h4" align='center' mb={2}>
+      <Typography variant="h4" align="center" mb={2}>
         Publications
       </Typography>
+
+      <Item
+        title={
+          "Bus stop spacing with heterogeneous trip lengths and elastic demand"
+        }
+        year={2024}
+        oa={true}
+        journal={"Transportation Research Part B: Methodological"}
+        author={"Ayush Pandey and Lewis Lehe"}
+        link={"https://doi.org/10.1016/j.jue.2022.103488"}
+      />
+
+      <Item
+        title={
+          "Congestive mode-switching and economies of scale on a bus route"
+        }
+        year={2024}
+        journal={"Transportation Research Part B: Methodological"}
+        author={"Ayush Pandey and Lewis Lehe"}
+        oa={true}
+        link={
+          "https://www.sciencedirect.com/science/article/pii/S0191261524000547"
+        }
+      />
+      <Item
+        title={"A Survey of Errors in GTFS Static Feeds from the United States"}
+        year={2024}
+        journal={"Findings"}
+        author={"Saipraneeth Devunuri and Lewis Lehe"}
+        oa={true}
+        link={"https://findingspress.org/article/116694-a-survey-of-errors-in-gtfs-static-feeds-from-the-united-states"}
+      />
+      <Item
+        title={"ChatGPT for GTFS: benchmarking LLMs on GTFS semantics and retrieval"}
+        year={2024}
+        journal={"Public Transport"}
+        author={"Saipraneeth Devunuri, Shirin Qiam and Lewis Lehe"}
+        link={"https://doi.org/10.1016/j.pubtran.2024.100025"}
+        oa={true}
+      />
+      <Item
+        title={"GTFS Segments: A fast and efficient library to generate bus stop spacings"}
+        year={2024}
+        journal={"Journal of Open Source Software"}
+        author={"Saipraneeth Devunuri and Lewis Lehe"}
+        oa={true}
+        link={"https://doi.org/10.21105/joss.06144"}
+      />
+      <Item
+        title={"A bathtub model of transit congestion"}
+        year={2024} // Assuming the current year, as it's not specified
+        journal={"Transportation Research Part B: Methodological"}
+        author={"Lewis J. Lehe and Ayush Pandey"}
+        link={"https://doi.org/10.1016/j.trb.2024.07.002"}
+        oa={true}
+      />
+      <Item
+        title={"Local stability of traffic equilibria in an isotropic network"}
+        year={2024}
+        journal={"Transportation Research Part B: Methodological"}
+        author={"Ayush Pandey, Lewis J Lehe, Vikash V Gayah"}
+        link={"https://doi.org/10.1016/j.trb.2024.01.002"}
+        oa={true}
+      />
+      <Item
+        title={"Bus Stop Spacing Statistics: Theory and Evidence"}
+        year={2024}
+        journal={"Journal of Public Transportation"}
+        author={"Saipraneeth Devunuri, Shirin Qiam, Ayush Pandey, Lewis Lehe"}
+        link={"https://doi.org/10.1016/j.jpubtr.2024.100083"}
+        oa={true}
+        pdf={
+          "https://www.sciencedirect.com/science/article/pii/S1077291X24000031"
+        }
+      />
+      <Item
+        title={"Scale effects in ridesplitting: A case study of the City of Chicago"}
+        year={2023}
+        journal={"Transportation Research Part A: Policy and Practice"}
+        author={"Hao Liu, Saipraneeth Devunuri, Lewis J. Lehe and Vikash V. Gayah"}
+        link={"https://doi.org/10.1016/j.tra.2023.103690"}
+      />
       <Item
         title={
           "Taxi service with heterogeneous drivers and a competitive medallion market"
         }
         year={2022}
         journal={"Journal of Urban Economics"}
-        author={"Lewis Lehe, Ayush Pandey"}
+        author={"Lewis J. Lehe and Ayush Pandey"}
         link={"https://doi.org/10.1016/j.jue.2022.103488"}
         pdf={
           "https://www.researchgate.net/profile/Lewis-Lehe/publication/344590011_Taxi_service_with_heterogeneous_drivers_and_a_competitive_medallion_market/links/62be11a5f10dfc7b53efaf31/Taxi-service-with-heterogeneous-drivers-and-a-competitive-medallion-market.pdf"
         }
       />
       <Item
-        title={"Bus Stop Spacing Statistics: Theory and Evidence"}
+        title={"Large Elasticity at Introduction"}
         year={2022}
-        journal={"revisions requested at Transportation Research Record"}
-        author={"Saipraneeth Devunuri, Shirin Qiam, Ayush Pandey, Lewis Lehe"}
-        pdf={"https://doi.org/10.48550/arXiv.2208.04394"}
+        journal={"Research in Transportation Economics"}
+        author={"Lewis Lehe and Saipraneeth Devunuri"}
+        link={"https://doi.org/10.1016/j.retrec.2021.101116"}
       />
       <Item
-        title={"Large Elasticity at Introduction"}
-        year={2021}
-        journal={"Research in Transportation Economics"}
-        author={"Lewis Lehe, Saipraneeth Devunuri"}
-        link={"https://doi.org/10.1016/j.retrec.2021.101116"}
+        title={"High time-resolution queue profile estimation at signalized intersections based on extended Kalman filtering"}
+        year={2022}
+        journal={"IEEE Transactions on Intelligent Transportation Systems"}
+        author={"Simon Hu, Qishen Zhou, Junyi Li, Yibing Wang, Claudio Roncoli, Lihui Zhang, Lewis Lehe"}
+        link={"https://doi.org/10.1109/TITS.2022.3154311"}
       />
       <Item
         title={"The Economics of Findings"}
