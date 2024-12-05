@@ -8,7 +8,7 @@ import TopBar from "src/TopBar/TopBar";
 import Publications from "src/Publications/Publications";
 import People from "src/People/People";
 // import Person from "src/Person/Person";
-// import myIconButton 
+// import myIconButton
 import Divider from "@mui/material/Divider";
 import Chip from "@mui/material/Chip";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -22,7 +22,7 @@ const theme = createTheme({
       main: colors.deepOrange["700"],
     },
     secondary: {
-      main: colors.lightBlue['A700']
+      main: colors.lightBlue["A700"],
     },
   },
 });
@@ -45,6 +45,29 @@ const Layout = () => {
   );
 };
 
+const GPT = () => {
+  return (
+    <div>
+      <iframe
+        src="https://transitgpt.streamlit.app?embedded=true"
+        width="100%"
+        height="100%"
+        id="iframe"
+        style={{
+          position: 'fixed',
+          background: 'white',
+          border: 'none',
+          top: 0,
+          bottom: 0,
+          right: 0,
+          left: 0
+        }}
+        // "position: fixed; background: #000; border: none;top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%;"
+      />
+    </div>
+  );
+};
+
 const App = () => {
   console.log("app loaded");
   return (
@@ -58,6 +81,7 @@ const App = () => {
             {/* <Route path="people/:person" element={<Person />} /> */}
             <Route path="*" element={<NoPage />} />
           </Route>
+          <Route path="/transitgpt" element={<GPT />}></Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
