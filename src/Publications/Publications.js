@@ -12,8 +12,8 @@ const Item = ({ title, journal, year, author, link, pdf, oa = false }) => {
     <Grid item sx={{ mb: 1 }}>
       <Paper sx={{ p: 1 }} variant="outlined">
         <Box>
-          <Link href={link} target="_blank" variant="h6"  color="secondary" >
-          {title}
+          <Link href={link} target="_blank" variant="h6" color="secondary">
+            {title}
           </Link>
           <Typography>
             {author} ({year})
@@ -56,6 +56,28 @@ export default () => {
       </Typography>
 
       <Item
+        title={"Taxation of ridehailing in the United States"}
+        year={2024}
+        oa={true}
+        journal={"Transport Policy"}
+        author={
+          "Lewis Lehe, Saipraneeth Devunuri, Javier Rondan, Ayush Pandey and Daniel Vignon"
+        }
+        link={"https://doi.org/10.1016/j.tranpol.2024.12.009"}
+      />
+
+      <Item
+        title={
+          "A Pipeline and NIR-Enhanced Dataset for Parking Lot Segmentation"
+        }
+        year={2024}
+        oa={true}
+        journal={"Winter Conference on Applications of Computer Vision"}
+        author={"Shirin Qiam, Saipraneeth Devunuri and Lewis Lehe"}
+        link={"hhttps://arxiv.org/abs/2412.13179"}
+      />
+
+      <Item
         title={
           "Bus stop spacing with heterogeneous trip lengths and elastic demand"
         }
@@ -84,10 +106,14 @@ export default () => {
         journal={"Findings"}
         author={"Saipraneeth Devunuri and Lewis Lehe"}
         oa={true}
-        link={"https://findingspress.org/article/116694-a-survey-of-errors-in-gtfs-static-feeds-from-the-united-states"}
+        link={
+          "https://findingspress.org/article/116694-a-survey-of-errors-in-gtfs-static-feeds-from-the-united-states"
+        }
       />
       <Item
-        title={"ChatGPT for GTFS: benchmarking LLMs on GTFS semantics and retrieval"}
+        title={
+          "ChatGPT for GTFS: benchmarking LLMs on GTFS semantics and retrieval"
+        }
         year={2024}
         journal={"Public Transport"}
         author={"Saipraneeth Devunuri, Shirin Qiam and Lewis Lehe"}
@@ -95,7 +121,9 @@ export default () => {
         oa={true}
       />
       <Item
-        title={"GTFS Segments: A fast and efficient library to generate bus stop spacings"}
+        title={
+          "GTFS Segments: A fast and efficient library to generate bus stop spacings"
+        }
         year={2024}
         journal={"Journal of Open Source Software"}
         author={"Saipraneeth Devunuri and Lewis Lehe"}
@@ -130,10 +158,14 @@ export default () => {
         }
       />
       <Item
-        title={"Scale effects in ridesplitting: A case study of the City of Chicago"}
+        title={
+          "Scale effects in ridesplitting: A case study of the City of Chicago"
+        }
         year={2023}
         journal={"Transportation Research Part A: Policy and Practice"}
-        author={"Hao Liu, Saipraneeth Devunuri, Lewis J. Lehe and Vikash V. Gayah"}
+        author={
+          "Hao Liu, Saipraneeth Devunuri, Lewis J. Lehe and Vikash V. Gayah"
+        }
         link={"https://doi.org/10.1016/j.tra.2023.103690"}
       />
       <Item
@@ -156,10 +188,14 @@ export default () => {
         link={"https://doi.org/10.1016/j.retrec.2021.101116"}
       />
       <Item
-        title={"High time-resolution queue profile estimation at signalized intersections based on extended Kalman filtering"}
+        title={
+          "High time-resolution queue profile estimation at signalized intersections based on extended Kalman filtering"
+        }
         year={2022}
         journal={"IEEE Transactions on Intelligent Transportation Systems"}
-        author={"Simon Hu, Qishen Zhou, Junyi Li, Yibing Wang, Claudio Roncoli, Lihui Zhang, Lewis Lehe"}
+        author={
+          "Simon Hu, Qishen Zhou, Junyi Li, Yibing Wang, Claudio Roncoli, Lihui Zhang, Lewis Lehe"
+        }
         link={"https://doi.org/10.1109/TITS.2022.3154311"}
       />
       <Item
