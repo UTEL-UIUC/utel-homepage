@@ -56,6 +56,18 @@ export default () => {
       </Typography>
 
       <Item
+        title={"Equilibrium horizontal queues and a paradox of tolling"}
+        year={2025}
+        oa={true}
+        journal={"Transportation Research Part B: Methodological"}
+        author={
+          "Lewis J. Lehe and Ayush Pandey"
+        }
+        link={"https://doi.org/10.1016/j.trb.2025.103152"}
+      />
+
+
+      <Item
         title={"Taxation of ridehailing in the United States"}
         year={2024}
         oa={true}
