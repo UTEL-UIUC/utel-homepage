@@ -34,6 +34,8 @@ export default () => {
           </Link>
           . The group is focused on movement of people in cities, emphasizing
           economic theory and novel data collection. We do a lot of programming.
+          <br />
+          Check out <Link href="https://crixet.com/" target="_blank" color="secondary">Crixet</Link>, a free and feature-rich tool for editing LaTeX in the browser. 
         </Typography>
         <MyIconButton
           alt="github"
