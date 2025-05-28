@@ -56,6 +56,24 @@ export default () => {
       </Typography>
 
       <Item
+        title={"Determinants of US Transit Bus Prices"}
+        year={2025}
+        oa={true}
+        journal={"Findings"}
+        author={"Ayush Pandey and Lewis Lehe"}
+        link={"https://doi.org/10.32866/001c.133936"}
+      />
+
+      <Item
+        title={"A Pipeline and NIR-Enhanced Dataset for Parking Lot Segmentation"}
+        year={2025}
+        oa={true}
+        journal={"IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"}
+        author={"Shirin Qiam, Saipraneeth Devunuri and Lewis Lehe"}
+        link={"https://doi.org/10.1109/WACV61041.2025.00127"}
+      />
+
+      <Item
         title={"Equilibrium horizontal queues and a paradox of tolling"}
         year={2025}
         oa={true}
