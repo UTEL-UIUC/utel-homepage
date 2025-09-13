@@ -54,6 +54,14 @@ export default () => {
       <Typography variant="h4" align="center" mb={2}>
         Publications
       </Typography>
+      <Item
+        title={"Market size and fare-free public transit in theory"}
+        year={2025}
+        oa={true}
+        journal={"Transportation Research Part B: Methodological"}
+        author={"Lewis Lehe and Ayush Pandey"}
+        link={"https://doi.org/10.1016/j.trb.2025.103265"}
+      />
 
       <Item
         title={"Determinants of US Transit Bus Prices"}
