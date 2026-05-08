@@ -7,6 +7,7 @@ import About from "src/About/About";
 import TopBar from "src/TopBar/TopBar";
 import Publications from "src/Publications/Publications";
 import People from "src/People/People";
+import CEE310 from "src/CEE310/CEE310";
 // import Person from "src/Person/Person";
 // import myIconButton
 import Divider from "@mui/material/Divider";
@@ -78,6 +79,7 @@ const App = () => {
             <Route index element={<About />} />
             <Route path="publications" element={<Publications />} />
             <Route path="people" element={<People />} />
+            <Route path="310" element={<CEE310 />} />
             {/* <Route path="people/:person" element={<Person />} /> */}
             <Route path="*" element={<NoPage />} />
           </Route>
